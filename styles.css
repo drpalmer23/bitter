@@ -395,12 +395,36 @@ button.register { /**/
     width:77px;
 }
 
+.rant-count .number{
+    width: 77;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    vertical-align: bottom;
+}
+
 .following-count {
     width: 106px;
 }
 
+.following-count .number {
+    width: 106px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    vertical-align: bottom;
+}
+
 .follower-count {
     width:80px;
+}
+
+.follower-count .number {
+    width:80px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    vertical-align: bottom;
 }
 
 .trends {
@@ -546,8 +570,6 @@ div.rant span.user-name {
 .about-bitter div {
     padding: 5px 10px;
 }
-
-
 
 @media screen and (max-width:930px) {
 

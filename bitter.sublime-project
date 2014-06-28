@@ -1,2 +1,29 @@
 {
+	"folders":
+	[
+		{
+			"follow_symlinks": true,
+			"path": "app"
+		},
+		{
+			"follow_symlinks": true,
+			"path": "bower_components"
+		},
+		{
+			"follow_symlinks": true,
+			"path": "css"
+		},
+		{
+			"follow_symlinks": true,
+			"path": "examples"
+		},
+		{
+			"follow_symlinks": true,
+			"path": "images"
+		},
+		{
+			"follow_symlinks": true,
+			"path": "js"
+		}
+	]
 }

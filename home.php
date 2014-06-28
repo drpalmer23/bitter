@@ -68,7 +68,7 @@
                 <div class="user-activity">
                     <span class="rant-count">
                         <div class="title">Rants</div>
-                        <div class="number">1209</div>
+                        <div class="number">1204</div>
                     </span>  
                     <span class="following-count"> 
                         <div class="title">Following</div>
@@ -76,7 +76,7 @@
                     </span>   
                     <span class="follower-count">
                         <div class="title">Followers</div>
-                        <div class="number">49</div>
+                        <div class="number">34</div>
                     </span>
                 </div>
             </div>

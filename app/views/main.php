@@ -4,10 +4,10 @@
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, minimal-ui" />
-	<title>Page Title</title>
+	<title>Bitter</title>
 	
 	<!-- Main CSS -->
-	<link rel="stylesheet" href="/css/styles.css">
+	<link rel="stylesheet" href="bitter/css/styles.css">
 
 	<!-- Payload CSS -->
 	<?php echo Payload::get_css(); ?>
@@ -32,7 +32,7 @@
 	<?php echo Payload::get_js(); ?>
 	
 	<!-- Main JS -->
-	<script src="/js/main.js"></script>
+	<script src="bitter/js/main.js"></script>
 
 </body>
 </html>
