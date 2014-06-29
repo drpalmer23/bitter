@@ -20,19 +20,19 @@ define('ROOT', rtrim(getenv('DOCUMENT_ROOT'), '/'));
 define('SCRIPT_BASENAME', basename($_SERVER['SCRIPT_FILENAME'], '.php'));
 
 // App Settings
-include(ROOT . '/app/app_settings.php');
+include(ROOT . '/bitter/app/app_settings.php');
 
 
 /****************************************
   CORE LIBRARY
 *****************************************/
 
-include(ROOT . '/app/core/core.lib.php');
+include(ROOT . '/bitter/app/core/core.lib.php');
 
 
 /****************************************
   CLASS LOADER
 *****************************************/
 
-include(ROOT . '/app/core/class_loader.class.php');
+include(ROOT . '/bitter/app/core/class_loader.class.php');
 ClassLoader::setup();

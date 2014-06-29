@@ -1,16 +1,17 @@
 <?php
 
 // Init
-include($_SERVER['DOCUMENT_ROOT'] . '/app/core/initialize.php');
+include($_SERVER['DOCUMENT_ROOT'] . '/bitter/app/core/initialize.php');
 
 // Controller
 class Controller extends AppController {
 	public function __construct() {
 		parent::__construct();
-
-		// Create welcome variable in view
-		$this->view->welcome = 'Welcome to MVC';
-	}
+	
+        // Add Files Payload
+        Payload::js('/bitter/examples/register/register.js');
+        Payload::css('/bitter/bower_components/ReptileForms/dist/reptileforms.min.css');
+    }
 
 }
 $controller = new Controller();

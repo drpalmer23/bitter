@@ -183,6 +183,121 @@
 	},
 	"buffers":
 	[
+		{
+			"file": "app/views/main.php",
+			"settings":
+			{
+				"buffer_size": 1273,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "js/main.js",
+			"settings":
+			{
+				"buffer_size": 1118,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "css/styles.css",
+			"settings":
+			{
+				"buffer_size": 9279,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "app/controllers/app_controller.class.php",
+			"settings":
+			{
+				"buffer_size": 587,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/home/danny/.config/sublime-text-3/Packages/User/Default (Linux).sublime-keymap",
+			"settings":
+			{
+				"buffer_size": 64,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "app/models/user.class.php",
+			"settings":
+			{
+				"buffer_size": 1879,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "app/core/class_loader.class.php",
+			"settings":
+			{
+				"buffer_size": 1320,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "app/core/db.class.php",
+			"settings":
+			{
+				"buffer_size": 7143,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "styles.css",
+			"settings":
+			{
+				"buffer_size": 9271,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "home.php",
+			"settings":
+			{
+				"buffer_size": 8712,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "app/views/primary_header.php",
+			"settings":
+			{
+				"buffer_size": 1255,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "app/core/initialize.php",
+			"settings":
+			{
+				"buffer_size": 870,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"contents": "<?php\n\n// Init\ninclude($_SERVER['DOCUMENT_ROOT'] . '/bitter/app/core/initialize.php');\n\n// Controller\nclass Controller extends AppController {\n	public function __construct() {\n		parent::__construct();\n\n		// Create welcome variable in view\n		$this->view->welcome = 'Welcome to MVC';\n	}\n\n}\n\n$controller = new Controller();\n\n// Extract Main Controler Vars\nextract($controller->view->vars);\n\n?>\n\n<body class=\"landing\">\n\n    <div class=\"main\">\n        <div class=\"content\">\n            <div class=\"welcome\">\n                <h1>Welcome to Bitter.</h1>\n                <p>\"If you have nothing nice to say... <br>\n                well, now you have a place to say it.\"</p>\n                <p>Rant, rave, vent, shout, get it all out. <br>\n                Follow what others are Ranting about,<br>\n                then Rant along or about others' Rants.</p>\n            </div>\n            <div class=\"login\">\n                <form class=\"reptile-form\" method=\"POST\" action=\"\">\n                    <label>Username or Email:</label>\n                    <input class=\"username\" type=\"text\" name=\"username\" placeholder=\"ex: BitterBOB or BOB&#64;email.com\"> \n                    <label>Password:</label>\n                    <input class=\"password\" type=\"password\" name=\"password\" placeholder=\"min: 6 characters, 1 number\">\n                    <button class=\"signin\" type=\"submit\">Sign In</button>\n                    <input class=\"remember-me\" type=\"checkbox\" checked=\"checked\" name=\"remember-me\"> \n                    <span>Remember me</span>\n                    <a href=\"#\">Forgot password<span class=\"question-mark\">???</span></a>\n                </form>\n            </div>\n            <div class=\"register\">\n                <h2>New to Bitter<span class=\"question-mark\">???  Sign Up Here</span></h2>\n                <form class=\"reptile-form\">\n                    <label>First Name:</label>\n                    <input class=\"first-name\" title=\"First Name\" type=\"text\" name=\"first-name\" placeholder=\"ex: Bobby\"></input>\n                    <label>Last Name:</label>\n                    <input class=\"last-name\" type=\"text\" name=\"last-name\" placeholder=\"ex: Bittersworth\">\n                    <label>Email:</label>\n                    <input class=\"email\" type=\"text\" name=\"email\" placeholder=\"ex: BitterBOB or BOB&#64;email.com\"></input>\n                    <label>Password:</label>\n                    <input class=\"password\" type=\"password\" name=\"password\" placeholder=\"min: 6 characters, 1 number\"></input>\n                    <label>Birthdate:</label>\n                    <input class=\"dob\" type=\"date\" name=\"dob\"></input>\n                    <button class=\"register\" type=\"submit\">Sign Up for Bitter</button>\n                </form>\n            </div>\n        </div>\n    </div>\n\n</form>\n</body>\n\n\n",
+			"file": "signin.php",
+			"file_size": 2745,
+			"file_write_time": 130484663863762450,
+			"settings":
+			{
+				"buffer_size": 2790,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "examples/register/index.php",
+			"settings":
+			{
+				"buffer_size": 927,
+				"line_ending": "Unix"
+			}
+		}
 	],
 	"build_system": "",
 	"command_palette":
@@ -264,10 +379,23 @@
 	},
 	"file_history":
 	[
+		"/var/www/danny/htdocs/bitter/app/core/initialize.php",
+		"/var/www/danny/htdocs/bitter/landing.php",
+		"/var/www/danny/htdocs/bitter/app/app_settings.php",
+		"/var/www/danny/htdocs/bitter/tables.sql",
+		"/var/www/danny/htdocs/bitter/main.js",
+		"/var/www/danny/htdocs/bitter/database.sql",
+		"/var/www/danny/htdocs/bitter/bower.json",
+		"/var/www/danny/htdocs/bitter/README.md",
+		"/var/www/danny/htdocs/bitter/package.json",
+		"/var/www/danny/htdocs/bitter/php.ini",
+		"/var/www/danny/htdocs/bitter/Gruntfile.js",
+		"/var/www/danny/htdocs/bitter/bitter_db_schema.ods",
+		"/var/www/danny/htdocs/bitter/bitter.sublime-project",
+		"/var/www/danny/htdocs/bitter/bitter.sublime-workspace",
 		"/var/www/danny/htdocs/bitter/styles.css",
 		"/var/www/danny/htdocs/bitter/index.php",
 		"/var/www/danny/htdocs/bitter/home.php",
-		"/var/www/danny/htdocs/bitter/landing.php",
 		"/var/www/danny/htdocs/bitter/index.html",
 		"/var/www/danny/htdocs/3rd-degree/db.php",
 		"/var/www/danny/htdocs/3rd-degree/layout.php",
@@ -378,20 +506,7 @@
 		"/home/danny/www/realestate_loops/realestate_loops.php",
 		"/var/www/danny/htdocs/realestate_loops/realestate_loops.php",
 		"/var/www/danny/htdocs/forms/process.php",
-		"/var/www/danny/htdocs/forms/forms.php",
-		"/home/danny/www/forms/forms.php",
-		"/home/danny/Dropbox/classwork/ClassProjects/classwork/w4d2/styles.css",
-		"/home/danny/Dropbox/classwork/ClassProjects/classwork/ClassProjects/ShoppingCart/cart-brig/main.js",
-		"/home/danny/Dropbox/classwork/ClassProjects/classwork/ClassProjects/ShoppingCart/answer/Cart/main.js",
-		"/home/danny/Dropbox/classwork/ClassProjects/classwork/ClassProjects/ShoppingCart/mainbrad.js",
-		"/home/danny/www/media_practice/index.html",
-		"/home/danny/Dropbox/classwork/ClassProjects/classwork/ClassProjects/ShoppingCart/index.html",
-		"/home/danny/Dropbox/classwork/ClassProjects/classwork/ClassProjects/ShoppingCart/main.js",
-		"/var/www/danny/htdocs/realestate_loops/realestate_data_clean.json",
-		"/var/www/danny/htdocs/Practice-JS-Loops/main.js",
-		"/var/www/danny/htdocs/Practice-JS-Loops/index.html",
-		"/var/www/danny/htdocs/index.html",
-		"/var/www/danny/htdocs/daniels.html"
+		"/var/www/danny/htdocs/forms/forms.php"
 	],
 	"find":
 	{
@@ -471,8 +586,421 @@
 	"groups":
 	[
 		{
+			"selected": 4,
 			"sheets":
 			[
+				{
+					"buffer": 0,
+					"file": "app/views/main.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1273,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1235,
+								1235
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 124.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 10,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "js/main.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1118,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								937,
+								937
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 210.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 9,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "css/styles.css",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 9279,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								3232,
+								3232
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/CSS/CSS.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 4202.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 8,
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "app/controllers/app_controller.class.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 587,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								47,
+								47
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 15.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "/home/danny/.config/sublime-text-3/Packages/User/Default (Linux).sublime-keymap",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 64,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								10,
+								10
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JSON.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 5,
+					"file": "app/models/user.class.php",
+					"semi_transient": true,
+					"settings":
+					{
+						"buffer_size": 1879,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 953.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 6,
+					"file": "app/core/class_loader.class.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1320,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								184,
+								184
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 174.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 3,
+					"type": "text"
+				},
+				{
+					"buffer": 7,
+					"file": "app/core/db.class.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 7143,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								2144,
+								2144
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 1328.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 4,
+					"type": "text"
+				},
+				{
+					"buffer": 8,
+					"file": "styles.css",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 9271,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								9188,
+								9188
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/CSS/CSS.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 12158.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 7,
+					"type": "text"
+				}
+			]
+		},
+		{
+			"selected": 2,
+			"sheets":
+			[
+				{
+					"buffer": 9,
+					"file": "home.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 8712,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								435,
+								435
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 12,
+					"type": "text"
+				},
+				{
+					"buffer": 10,
+					"file": "app/views/primary_header.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1255,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								298,
+								298
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 17.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 6,
+					"type": "text"
+				},
+				{
+					"buffer": 11,
+					"file": "app/core/initialize.php",
+					"semi_transient": true,
+					"settings":
+					{
+						"buffer_size": 870,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 5,
+					"type": "text"
+				},
+				{
+					"buffer": 12,
+					"file": "signin.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 2790,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								965,
+								965
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 509.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 11,
+					"type": "text"
+				},
+				{
+					"buffer": 13,
+					"file": "examples/register/index.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 927,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								554,
+								554
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": -0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 13,
+					"type": "text"
+				}
 			]
 		}
 	],
@@ -493,11 +1021,18 @@
 				0,
 				1,
 				1
+			],
+			[
+				1,
+				0,
+				2,
+				1
 			]
 		],
 		"cols":
 		[
 			0.0,
+			0.600866678709,
 			1.0
 		],
 		"rows":
@@ -552,7 +1087,7 @@
 	"show_open_files": true,
 	"show_tabs": true,
 	"side_bar_visible": true,
-	"side_bar_width": 120.0,
+	"side_bar_width": 206.0,
 	"status_bar_visible": true,
 	"template_settings":
 	{

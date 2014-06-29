@@ -52,15 +52,19 @@ li {
 *        Components               *
 ***********************************/
 
-form label {
+form div.title{
     display: block;
     margin:5px 10px 0 10px;
     font-size: 26px;
+}
+form div.field-input, form div.field {
+    display: inline-block;
 }
 
 form input {
     font-size: 22px;
     border-radius: 4px;
+    display: inline-block;
 }
 
 button {
@@ -199,7 +203,7 @@ button.search {
 /**** begin structure for landing page ****/
 
 body.landing { /**/
-    background-image: url(images/img_1.jpg);
+    background-image: url(/bitter/images/img_1.jpg);
     background-size: 100%;
 }
 .landing .main { /**/
@@ -240,14 +244,14 @@ div.login form { /**/
     width:315px;
 }
 
-.login .username { /**/
+.login input.username { /**/
     margin:0 10px 3px 10px;
     height: 30px;
     width:290px;
     border-radius: 4px;
 }
 
-.login .password { /**/
+.login input.password { /**/
     margin:0 10px 6px 10px;
     height: 30px;
     width:185px;
@@ -255,7 +259,7 @@ div.login form { /**/
 }
 
 .remember-me { /**/
-    margin:0 0 6px 10px;
+    margin:0 0 6px 5px;
 }
 
 .login a { /* forgot password */
@@ -265,7 +269,8 @@ div.login form { /**/
 
 button.signin { /**/
     width:90px;
-    margin:0 10px 6px 0px;
+    margin:0 10px 7px 0;
+    vertical-align: bottom;
 }
 
 div.register { /**/
@@ -287,20 +292,32 @@ div.login form { /**/
     padding: 5px 0px 5px 10px;
 }
 
-.register .first-name, .register .last-name, .register .email, .register .password { /**/
+.register input.first-name {
+    margin: 0 5px 3px 10px;
+    height: 30px;
+    width: 140px;
+}
+
+.register input.last-name {
+    margin:0 10px 3px 5px;
+    height: 30px;
+    width: 140px;
+}
+
+.register input.username, .register input.email, .register input.password { /**/
     margin:0 10px 3px 10px;
     height: 30px;
     width:290px;
 }
 
-.register .password { /**/
+.register input.password { /**/
     margin:0 10px 3px 10px;
     height: 30px;
     width:290px;
 }
 
-.register .dob { /**/
-    margin:0 10px 3px 10px;
+.register input.dob { /**/
+    margin:0 10px 10px 10px;
     height: 30px;
     width:140px;
 }
@@ -308,7 +325,8 @@ div.login form { /**/
 button.register { /**/
     width:140px;
     height: 30px;
-    margin: 0 5px 10px 0px
+    margin: 0 5px 10px 0;
+    vertical-align: bottom;
 }
 
  /********** begin structure for home page **********/

@@ -1,55 +1,27 @@
-<!doctype html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Bitter</title>
-    <link rel="shortcut icon" href="images/crowThumb.png">
-    <link rel="stylesheet" type="text/css" href="styles.css">
-    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
-    <link href='http://fonts.googleapis.com/css?family=Amatic+SC:700,400' rel='stylesheet' type='text/css'>
-</head>
+<?php
+
+// Init
+include($_SERVER['DOCUMENT_ROOT'] . '/bitter/app/core/initialize.php');
+
+// Controller
+class Controller extends AppController {
+    public function __construct() {
+        parent::__construct();
+
+        // Create welcome variable in view
+        $this->view->welcome = 'Welcome to MVC';
+    }
+
+}
+
+$controller = new Controller();
+
+// Extract Main Controler Vars
+extract($controller->view->vars);
+
+?>
+
 <body class="home">
-
-<!--__________begin header___________________-->
-<div class="header">
-<div class="container">
-
-        <div class="left-menu">
-            <span class="navigation">
-                <a href="" class="home-nav">
-                    <span class="icon">Icon</span>
-                    <span class="icon-name">Home</span>
-                </a>
-                <a href="" class="alert-nav">
-                    <span class="icon">Icon</span>
-                    <span class="icon-name">Notifications</span>
-                </a>
-                <a href="" class="me-nav">
-                    <span class="icon">Icon</span>
-                    <span class="icon-name">Me</span>
-                </a>
-            </span>
-        </div>
-
-        <a class="logo-link" href="#">
-            <span class="logo">
-                <img src="images/crowThumb.png">
-            </span>
-        </a>
-
-        <div class="right-menu">
-            <span class="search-bar">
-                <form class="search">
-                    <input class="search" name="search" placeholder="Search">
-                    <button class="search"><i class="fa fa-search"></i></button>
-                </form> 
-            </span>  
-            <!-- need messaging, settings added later -->
-        </div>
-    </div>
-</div>
-<!-- ____________end header___________________-->
-
 <div class="main">
     <div class="container">
         <div class="left-boxes">
@@ -236,6 +208,14 @@
         </div>
     </div>
 </div>
+
+<form class="reptile-form" action="process_form.php">
+    <input type="text" name="first_name" title="First Name" required>
+    <input type="text" name="last_name" title="Last Name" required>
+    <input type="email" name="email" title="Email" required maxlength="100">
+    <input type="password" name="password" title="Password" required>
+    <button type="submit">Submit</button>
+</form>
 
 </body>
 </html>

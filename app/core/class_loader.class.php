@@ -11,7 +11,7 @@ class ClassLoader {
 	public static function setup() {
 
 		// Setup Include Paths
-		$paths = self::get_sub_paths(ROOT . '/app');
+		$paths = self::get_sub_paths(ROOT . '/bitter/app');
 		set_include_path(implode(PATH_SEPARATOR, $paths));
 
 		// SPL Autoloader

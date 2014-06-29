@@ -28,12 +28,13 @@ function rotateImages() {
   if(num==temp){
     rotateImages();
   } else {
-   document.body.style.backgroundImage='url('+preloads[num].src+')';
+   $('.landing').css('background-image', 'url('+preloads[num].src+')');
    temp=num;
 
   setTimeout(function(){rotateImages()},speed);
   }
  }
+
 
 if(window.addEventListener){
    window.addEventListener('load',rotateImages,false);
@@ -43,5 +44,11 @@ if(window.addEventListener){
   }
 };
 
+
+// --------hide nav and search bar on signin page-------
+if (window.location.href.indexOf('signin') !=-1) {
+  $('.left-menu').hide();
+  $('.right-menu').hide();
+}
 
 })(jQuery);
