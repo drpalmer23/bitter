@@ -46,13 +46,11 @@ if(window.addEventListener){
 
 
 // --------hide nav and search bar on signin page-------
-if (window.location.href.indexOf('signin') !=-1) {
-  $('.left-menu').hide();
-  $('.right-menu').hide();
-}
+  $('.landing .left-menu').hide();
+  $('.landing .right-menu').hide();
 
 
-// Use Reptile Forms
+// ----------Use Reptile Forms-------------------
   var form = new ReptileForm('.rf-register', {
     validationError: function(err) {
 
@@ -103,6 +101,6 @@ if (window.location.href.indexOf('signin') !=-1) {
 
 
 
-    
+
   });
 })(jQuery);
