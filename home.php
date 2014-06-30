@@ -1,7 +1,7 @@
 <?php
 
 // Init
-include($_SERVER['DOCUMENT_ROOT'] . '/bitter/app/core/initialize.php');
+include('app/core/initialize.php');
 
 // Controller
 class Controller extends AppController {
@@ -208,14 +208,6 @@ extract($controller->view->vars);
         </div>
     </div>
 </div>
-
-<form class="reptile-form" action="process_form.php">
-    <input type="text" name="first_name" title="First Name" required>
-    <input type="text" name="last_name" title="Last Name" required>
-    <input type="email" name="email" title="Email" required maxlength="100">
-    <input type="password" name="password" title="Password" required>
-    <button type="submit">Submit</button>
-</form>
 
 </body>
 </html>

@@ -83,9 +83,9 @@ class Payload {
 	 * Add JavaScript File
 	 */
 	public static function js($filename) {
-		if (!array_key_exists($filename, self::$js)) {			
-			if (file_exists(ROOT . $filename)) {
-				self::$js[$filename] = $filename . '?' . date("ymdHis", filemtime(ROOT . $filename));
+		if (!array_key_exists($filename, self::$js)) {	
+			if (file_exists(ROOT . '/' . $filename)) {
+				self::$js[$filename] = $filename . '?' . date("ymdHis", filemtime(ROOT . '/' . $filename));
 			}
 		}
 	}

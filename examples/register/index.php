@@ -1,7 +1,7 @@
 <?php
 
 // Init
-include($_SERVER['DOCUMENT_ROOT'] . '/bitter/app/core/initialize.php');
+include('/app/core/initialize.php');
 
 // Controller
 class Controller extends AppController {

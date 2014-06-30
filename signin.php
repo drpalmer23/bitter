@@ -1,7 +1,7 @@
 <?php
 
 // Init
-include($_SERVER['DOCUMENT_ROOT'] . '/bitter/app/core/initialize.php');
+include('app/core/initialize.php');
 
 // Controller
 class Controller extends AppController {
@@ -11,8 +11,8 @@ class Controller extends AppController {
 		// Create welcome variable in view
 		$this->view->welcome = 'Welcome to MVC';
 	
-        // Add Files Payload
-        Payload::js('/bitter/examples/register/register.js');
+        // // Add Files Payload
+        Payload::js('js/testing.js');
     }
 
 }
@@ -48,7 +48,7 @@ extract($controller->view->vars);
             </div>
             <div class="register">
                 <h2>New to Bitter<span class="question-mark">???  Sign Up Here</span></h2>
-                <form class="rf-register" action= "/bitter/examples/register/process_form.php" method="POST">
+                <form class="rf-register" action= "reg.php" method="POST">
                     <input class="first-name" title="First Name:" type="text" name="first-name" placeholder="ex: Bobby"></input>
                     <input class="last-name" title="Last Name:" type="text" name="last-name" placeholder="ex: Bittersworth">
                     <input class="username" title="Username:" type="text" name="username" placeholder="ex: BitterBOB123" maxlength="15" required>
