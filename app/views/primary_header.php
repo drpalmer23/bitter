@@ -32,6 +32,13 @@
                     <button class="search"><i class="fa fa-search"></i></button>
                 </form> 
             </span>  
+            <div class="menu">icon
+                <div class="menu-content">
+                    <a class="profile" href="#">My Profile</a>
+                    <a class="account" href="#">Edit Account</a>
+                    <a class="log-out" href="#">Log Out</a>
+                </div>
+            </div>
             <!-- need messaging, settings added later -->
         </div>
     </div>

@@ -39,10 +39,6 @@ a:hover {
     font-size: 22px;
 }
 
-li {
-    list-style: none;
-}
-
 .home h1 {
     background-color: skyblue;
     padding-left: 10px;
@@ -102,7 +98,7 @@ button {
 
 .left-menu {
     display: inline-block;
-    width:290px;
+    width:250px;
     position:absolute;
     top:0;
     left:0;
@@ -143,10 +139,11 @@ span.navigation {
 }
 
 .right-menu {
-    width: 290px;
+    width: 250px;
+    float:right;
     position: absolute;
-    top:0px;
-    right:0px;
+    top:0;
+    right:0;
 }
 
 @media screen and (max-width: 650px) {
@@ -157,7 +154,8 @@ span.navigation {
 
 .search-bar {
     margin-top: 5px;
-    float:right;
+    float:left;
+    margin: ;
 }
 
 form.search {
@@ -198,6 +196,26 @@ button.search {
     vertical-align: center;
 }
 
+.right-menu .menu {
+    background-color: red;
+    width: 27px;
+    height:27px;
+    margin-top: 9px;
+    float:right;
+}
+
+.menu-content {
+    background-color: lime;
+    position: absolute;
+    width:100px;
+    top: 36px;
+    right:0;
+    z-index: 1000;
+}
+
+.menu-content a {
+    display: block;
+}
 /******* end header *********/
 
 /**** begin structure for landing page ****/
@@ -206,6 +224,7 @@ body.landing { /**/
     background-image: url(/bitter/images/img_1.jpg);
     background-size: 100%;
 }
+
 .landing .main { /**/
  width:90%;
  margin:auto;
@@ -359,7 +378,6 @@ button.register { /**/
     background-color: yellow;
     height: 250px;
     position: relative;
-    margin-bottom: 10px;
 }
 
 .user-summary .cover-photo {
@@ -443,6 +461,42 @@ button.register { /**/
     overflow: hidden;
     text-overflow: ellipsis;
     vertical-align: bottom;
+}
+
+.write-new {
+    background-color: blue;
+    margin-bottom: 10px;
+    position: relative;
+}
+
+
+.write-new button {
+    padding: 0 3px;
+    float: right;
+}
+
+textarea.new-post {
+    margin: 5px 10px;
+    padding: 3px;
+    width: 270px;
+    white-space: pre-wrap;
+    font-size: 22px;
+    height: 30px;
+    background-color: #fff;
+    display: inline-block;
+    border-radius: 4px;
+    resize: none;
+    overflow: hidden;
+}
+
+.new-post.extend {
+    height: 160px;
+
+}
+
+.post-options   {
+    height: 35px;
+
 }
 
 .trends {
@@ -538,6 +592,8 @@ div.rant span.user-name {
 .right-boxes {
     float:left;
     width:290px;
+    position: relative;
+    z-index: 100;
 }
 
 .who-to-follow {

@@ -23,7 +23,7 @@ class db extends mysqli {
 	private function __construct() {
 
 		// MySQLi Constructor
-		@parent::__construct('localhost', 'root', '', 'bitter');
+		@parent::__construct(DB_HOST, DB_USER, DB_PASS, DB_NAME);
 		@parent::set_charset('utf8');   
       
 		// Non-OO technique ensures compatability with some earlier versions of PHP5

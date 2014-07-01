@@ -50,6 +50,39 @@ if(window.addEventListener){
   $('.landing .right-menu').hide();
 
 
+//----------hide/show menu-----------
+  $('.menu-content').hide();
+  $('.menu').on('click', function() {
+    $('.menu-content').show();
+  });
+  $(document).mouseup(function (e) {
+    var container = $('.menu-content');
+
+    if (!container.is(e.target) // if the target of the click isn't the container...
+        && container.has(e.target).length === 0) // ... nor a descendant of the container
+    {
+        container.hide();
+    }
+  });
+
+//----------make comment form extend------------
+  $('.post-options').hide();
+  $('.new-post').on('click', function() {
+    $('.post-options').show();
+    $('.new-post').addClass('extend');
+  });
+  $(document).mouseup(function (e) {
+  var container = $('.post-options');
+
+  if (!container.is(e.target) // if the target of the click isn't the container...
+      && container.has(e.target).length === 0) // ... nor a descendant of the container
+  {
+      container.hide();
+      $('.new-post').removeClass('extend');
+  }
+  });
+
+
 // ----------Use Reptile Forms-------------------
   var form = new ReptileForm('.rf-register', {
     validationError: function(err) {

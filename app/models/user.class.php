@@ -24,6 +24,7 @@ class User extends Model {
 		$sql_values = [
 			'first_name' => $input['first-name'],
 			'last_name' => $input['last-name'],
+			'user_name' => $input['username'],
 			'email' => $input['email'],
 			'password' => $input['password'],
 			'dob' => $input['dob']
@@ -59,10 +60,12 @@ class User extends Model {
 
 		// Prepare SQL Values
 		$sql_values = [
-			'first_name' => $input['first_name'],
-			'last_name' => $input['last_name'],
+			'first_name' => $input['first-name'],
+			'last_name' => $input['last-name'],
+			'user_name' => $input['username'],
 			'email' => $input['email'],
-			'password' => $input['password']
+			'password' => $input['password'],
+			'dob' => $input['dob']
 		];
 
 		// Ensure values are encompased with quote marks
