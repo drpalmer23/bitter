@@ -23,7 +23,7 @@ CREATE TABLE IF NOT EXISTS `user` (
   `last_name` varchar(15) NOT NULL,
   `email` varchar(255) NOT NULL,
   `password` varchar(30) NOT NULL,
-  `zip` int(5) NOT NULL,
+  `zip` int(5) DEFAULT NULL,
   `last_update` datetime NOT NULL,
   `created_date` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
   `bio` varchar(255) DEFAULT NULL,

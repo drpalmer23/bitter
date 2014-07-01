@@ -12,7 +12,7 @@ class Controller extends AppController {
 		$this->view->welcome = 'Welcome to MVC';
 	
         // // Add Files Payload
-        Payload::js('js/testing.js');
+        // Payload::js('js/testing.js');
     }
 
 }
@@ -38,8 +38,8 @@ extract($controller->view->vars);
             </div>
             <div class="login">
                 <form class="rf-login" action="" method="POST">
-                    <input class="username" title="Username or Email:" type="text" name="username" placeholder="ex: BitterBOB123  or  BOBBY&#64;email.com"> 
-                    <input class="password" title="Password:" type="password" name="password" placeholder="min: 6 characters, 1 number">
+                    <input class="username" title="Username or Email:" type="text" name="username" placeholder="ex: BitterBOB123  or  BOBBY&#64;email.com" required> 
+                    <input class="password" title="Password:" type="password" name="password" placeholder="min: 6 characters, 1 number" required>
                     <button class="signin" type="submit">Sign In</button>
                     <input class="remember-me" type="checkbox" checked="checked" name="remember-me"> 
                     <span>Remember me</span>

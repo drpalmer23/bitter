@@ -16,7 +16,7 @@
 	<?php echo Payload::get_css(); ?>
 
 	<!-- Modernizr -->
-<script src="/bitter/bower_components/modernizr/modernizr.js"></script>
+	<script src="/bitter/bower_components/modernizr/modernizr.js"></script>
 
 </head>
 <body>

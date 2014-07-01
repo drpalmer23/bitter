@@ -53,6 +53,7 @@ form div.title{
     margin:5px 10px 0 10px;
     font-size: 26px;
 }
+
 form div.field-input, form div.field {
     display: inline-block;
 }
@@ -70,6 +71,13 @@ button {
     font-size: 24px;
     border-radius: 6px;
     margin:0 10px 6px 0px;
+}
+
+.error-message {
+    color:red;
+    margin-left: 10px;
+    font-size: 16px;
+    display: inline-block;
 }
 
 /**********************************

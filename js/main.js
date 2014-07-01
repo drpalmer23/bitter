@@ -1,4 +1,5 @@
 ;(function($){
+  $(function(){
 
    var num;
    var temp=0;
@@ -88,8 +89,9 @@ if(window.addEventListener){
     validationError: function(err) {
 
       // Handle validatin errors any way you want
-      this.el.before(JSON.stringify(err));
-
+      for (i in err) {
+      $('.rf-register ' + '.' + err[i].name + ' .title').append('<div class="error-message">' + err[i].name + ' is required</div>');
+      };
     },
 
     submitError: function(xhr, settings, thrownError) {
@@ -113,7 +115,9 @@ if(window.addEventListener){
     validationError: function(err) {
 
       // Handle validatin errors any way you want
-      this.el.before(JSON.stringify(err));
+      for (i in err) {
+      $('.rf-login ' + '.' + err[i].name + ' .title').append('<div class="error-message">' + err[i].name + ' is required</div>');
+      };
 
     },
   
@@ -132,8 +136,7 @@ if(window.addEventListener){
 
     }
 
-
-
-
   });
+
+});
 })(jQuery);
