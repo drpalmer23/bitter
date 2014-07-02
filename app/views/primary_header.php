@@ -4,7 +4,7 @@
 
         <div class="left-menu">
             <span class="navigation">
-                <a href="" class="home-nav">
+                <a href="home.php" class="home-nav">
                     <span class="icon">Icon</span>
                     <span class="icon-name">Home</span>
                 </a>
@@ -35,8 +35,8 @@
             <div class="menu">icon
                 <div class="menu-content">
                     <a class="profile" href="#">My Profile</a>
-                    <a class="account" href="#">Edit Account</a>
-                    <a class="log-out" href="#">Log Out</a>
+                    <a class="account" href="account.php">Edit Account</a>
+                    <a class="log-out" href="index.php">Log Out</a>
                 </div>
             </div>
             <!-- need messaging, settings added later -->

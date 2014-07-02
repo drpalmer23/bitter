@@ -35,11 +35,11 @@ a:hover {
     color: #ff822e;
 }
 
-.home {
+.home, .account {
     font-size: 22px;
 }
 
-.home h1 {
+.home h1, .account h1 {
     background-color: skyblue;
     padding-left: 10px;
 }
@@ -358,11 +358,7 @@ button.register { /**/
 
  /********** begin structure for home page **********/
 
-.home .main {
-    margin:auto;
-}
-
-.home .main .container { 
+.home .main .container, .account .main .container { 
     max-width:1200px;
     margin: auto;
     margin-top: 15px;
@@ -665,6 +661,107 @@ div.rant span.user-name {
         margin-bottom: 10px;
     }
 
+}
+
+/*----begin account.php page--------------*/
+
+.account .bio {
+    margin-top: 10px;
+    float:left;
+    background-color: yellow;
+}
+
+.account .bio p {
+    padding-left: 10px;
+    border-bottom: 1px solid black;
+}
+
+textarea.bio-text {
+    display: inline-block;
+    margin: 5px 10px 0 10px;
+    padding: 3px;
+    width: 270px;
+    height: 200px;
+    white-space: pre-wrap;
+    font-size: 22px;
+    background-color: #fff;
+    border-radius: 4px;
+    resize: none;
+    overflow: hidden;
+}
+
+.account .container { 
+    margin:auto;
+}
+
+.account-info {
+    float:left;
+    width: 290px;
+    background-color: yellow;
+
+}
+
+.account-info p, .password-reset p {
+    background-color: pink;
+    border-bottom: 1px solid black;
+    padding-left: 10px;
+}
+
+.account-info form div {
+    display: inline-block;
+}
+
+.account-info input {
+    width:270px;
+    margin-left: 10px;
+}
+
+.account-info button {
+    padding: 0 10px;
+    margin-top: 5px;
+    float: right;
+}
+
+.bio button {
+    padding: 0 10px;
+    float: right;
+}
 
 
+.password-reset {
+    background-color: yellow;
+    width: 290px;
+    float: left;
+    margin-left: 10px
+}
+
+.password-reset form div {
+    display: inline-block;
+}
+
+.password-reset input {
+    width:270px;
+    margin-left: 10px;
+}
+
+.password-reset .button {
+    width: 160px;
+    margin:auto;
+}
+
+#reset-pw {
+    width: 140px;
+    margin: 10px;
+    text-align: center;
+    display: inline-block;
+}
+
+#save-pw {
+    padding: 0 10px;
+    margin: 10px;
+    float: right;
+}
+
+.password-reset input {
+    margin-left: 10px;
 }

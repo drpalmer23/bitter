@@ -4,12 +4,12 @@
 		"selected_items":
 		[
 			[
-				"border",
-				"border-radius"
+				"font",
+				"font-size"
 			],
 			[
-				"font",
-				"font-family"
+				"border",
+				"border-radius"
 			],
 			[
 				"inlin",
@@ -191,7 +191,23 @@
 			"file": "app/views/main.php",
 			"settings":
 			{
-				"buffer_size": 1251,
+				"buffer_size": 1252,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "examples/register/process_form.php",
+			"settings":
+			{
+				"buffer_size": 553,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "examples/register/register.js",
+			"settings":
+			{
+				"buffer_size": 1083,
 				"line_ending": "Unix"
 			}
 		},
@@ -199,7 +215,7 @@
 			"file": "js/main.js",
 			"settings":
 			{
-				"buffer_size": 3230,
+				"buffer_size": 2827,
 				"line_ending": "Unix"
 			}
 		},
@@ -212,10 +228,10 @@
 			}
 		},
 		{
-			"file": "css/styles.css",
+			"file": "app/models/rant.class.php",
 			"settings":
 			{
-				"buffer_size": 10445,
+				"buffer_size": 1803,
 				"line_ending": "Unix"
 			}
 		},
@@ -223,7 +239,59 @@
 			"file": "home.php",
 			"settings":
 			{
-				"buffer_size": 8312,
+				"buffer_size": 8318,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "reg.php",
+			"settings":
+			{
+				"buffer_size": 552,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "post.php",
+			"settings":
+			{
+				"buffer_size": 611,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "app/core/db.class.php",
+			"settings":
+			{
+				"buffer_size": 7144,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "css/styles.css",
+			"settings":
+			{
+				"buffer_size": 10697,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"contents": "<?php\n\n",
+			"file": "login.php",
+			"file_size": 9,
+			"file_write_time": 130487256180205166,
+			"settings":
+			{
+				"buffer_size": 7,
+				"line_ending": "Unix",
+				"name": "login.php"
+			}
+		},
+		{
+			"file": "css/account.php",
+			"settings":
+			{
+				"buffer_size": 2696,
 				"line_ending": "Unix"
 			}
 		},
@@ -239,7 +307,15 @@
 			"file": "index.php",
 			"settings":
 			{
-				"buffer_size": 2831,
+				"buffer_size": 2882,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/var/www/danny/htdocs/3rd-degree/login.php",
+			"settings":
+			{
+				"buffer_size": 1767,
 				"line_ending": "Unix"
 			}
 		}
@@ -324,11 +400,24 @@
 	},
 	"file_history":
 	[
+		"/var/www/danny/htdocs/singleton/index.php",
+		"/var/www/danny/htdocs/bitter/examples/list_users/index.php",
+		"/var/www/danny/htdocs/bitter/examples/database/index.php",
+		"/var/www/danny/htdocs/bitter/examples/register/index.php",
+		"/var/www/danny/htdocs/bitter/tables.sql",
+		"/var/www/danny/htdocs/pma/index.php",
+		"/var/www/danny/htdocs/pma/phpinfo.php",
+		"/var/www/danny/htdocs/pma/config.inc.php",
+		"/var/www/danny/htdocs/bitter/signin.php",
+		"/var/www/danny/htdocs/php-db-forms/index.php",
+		"/var/www/danny/htdocs/php-db-forms/profile.php",
+		"/var/www/danny/htdocs/php-db-forms/header.php",
+		"/var/www/danny/htdocs/practicePHP/index.php",
+		"/var/www/danny/htdocs/DanielsCart/cart.js",
 		"/var/www/danny/htdocs/bitter/app/core/db.class.php",
 		"/var/www/danny/htdocs/bitter/app/models/user.class.php",
 		"/var/www/danny/htdocs/bitter/css/styles.css",
 		"/var/www/danny/htdocs/bitter/reg.php",
-		"/var/www/danny/htdocs/bitter/signin.php",
 		"/var/www/danny/htdocs/bitter/app/app_settings.php",
 		"/var/www/danny/htdocs/bitter/index.php",
 		"/var/www/danny/htdocs/bitter/index.html",
@@ -337,9 +426,6 @@
 		"/var/www/danny/htdocs/bitter/app/core/class_loader.class.php",
 		"/var/www/danny/htdocs/bitter/app/views/primary_header.php",
 		"/var/www/danny/htdocs/bitter/app/core/payload.class.php",
-		"/var/www/danny/htdocs/bitter/examples/register/index.php",
-		"/var/www/danny/htdocs/bitter/examples/database/index.php",
-		"/var/www/danny/htdocs/bitter/examples/list_users/index.php",
 		"/var/www/danny/htdocs/bitter/examples/register/register.js",
 		"/var/www/danny/htdocs/bitter/js/testing.js",
 		"/var/www/danny/htdocs/3rd-degree/register.php",
@@ -348,7 +434,6 @@
 		"/var/www/danny/htdocs/bitter/styles.css",
 		"/home/danny/.config/sublime-text-3/Packages/User/Default (Linux).sublime-keymap",
 		"/var/www/danny/htdocs/bitter/landing.php",
-		"/var/www/danny/htdocs/bitter/tables.sql",
 		"/var/www/danny/htdocs/bitter/main.js",
 		"/var/www/danny/htdocs/bitter/database.sql",
 		"/var/www/danny/htdocs/bitter/bower.json",
@@ -379,7 +464,6 @@
 		"/var/www/danny/htdocs/3rd-degree/initialize.php",
 		"/var/www/danny/htdocs/DanielsCart/cart.html",
 		"/var/www/danny/htdocs/DanielsCart/styles.css",
-		"/var/www/danny/htdocs/php-db-forms/index.php",
 		"/var/www/danny/htdocs/3rd-degree/example.html",
 		"/var/www/danny/htdocs/lakeportantique/index.html",
 		"/var/www/danny/htdocs/selfpractice/untitled.html",
@@ -389,8 +473,6 @@
 		"/var/www/danny/htdocs/selfpractice/cart.js",
 		"/var/www/danny/htdocs/3rd-degree/model.php",
 		"/home/danny/.bashrc",
-		"/var/www/danny/htdocs/php-db-forms/profile.php",
-		"/var/www/danny/htdocs/php-db-forms/header.php",
 		"/var/www/danny/htdocs/php-db-forms/tables.sql",
 		"/var/www/danny/htdocs/phpforms1/index.php",
 		"/var/www/danny/htdocs/php-db-forms/php-db-forms/index.php",
@@ -401,14 +483,12 @@
 		"/var/www/danny/htdocs/DanielsCart/default_products.js",
 		"/home/danny/Dropbox/selfpractice/cart.js",
 		"/home/danny/www/3rd-degree/data.js",
-		"/var/www/danny/htdocs/DanielsCart/cart.js",
 		"/var/www/danny/htdocs/PHP-Variables-to-JS/index.php",
 		"/var/www/danny/htdocs/PHP-Variables-to-JS/payload.php",
 		"/var/www/danny/htdocs/PHP-Variables-to-JS/view.php",
 		"/var/www/danny/htdocs/mysql_intro/user.sql",
 		"/var/www/danny/htdocs/mysql_intro/mysql.php",
 		"/var/www/danny/htdocs/mysql_intro/mysql-works.php",
-		"/var/www/danny/htdocs/pma/config.inc.php",
 		"/var/www/danny/htdocs/3rd-degree/indexUI.php",
 		"/home/danny/www/pma/index.php",
 		"/var/www/danny/htdocs/3rd-degree/copied.php",
@@ -447,11 +527,7 @@
 		"/var/www/danny/htdocs/tgStudent/overview.css",
 		"/var/www/danny/htdocs/tgStudent/studentOverview.js",
 		"/var/www/danny/htdocs/tgStudent/style.css",
-		"/home/danny/Dropbox/classwork/ClassProjects/gittest/todoList/todoList.html",
-		"/var/www/danny/htdocs/tgStudent/index.html",
-		"/home/danny/www/tgStudent/styles.css",
-		"/home/danny/www/tgStudent/index.html",
-		"/home/danny/www/DanielsCart/cart.js"
+		"/home/danny/Dropbox/classwork/ClassProjects/gittest/todoList/todoList.html"
 	],
 	"find":
 	{
@@ -469,6 +545,8 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"account",
+			"username",
 			"text",
 			"input",
 			"}\n",
@@ -533,13 +611,13 @@
 		"reverse": false,
 		"show_context": true,
 		"use_buffer2": true,
-		"whole_word": true,
+		"whole_word": false,
 		"wrap": true
 	},
 	"groups":
 	[
 		{
-			"selected": 1,
+			"selected": 3,
 			"sheets":
 			[
 				{
@@ -548,15 +626,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 1251,
+						"buffer_size": 1252,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								12,
-								12
+								643,
+								643
 							]
 						],
 						"settings":
@@ -565,27 +643,85 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 60.0,
+						"translation.y": 143.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 4,
+					"stack_index": 2,
 					"type": "text"
 				},
 				{
 					"buffer": 1,
-					"file": "js/main.js",
+					"file": "examples/register/process_form.php",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 3230,
+						"buffer_size": 553,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1993,
-								1993
+								24,
+								24
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 3,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "examples/register/register.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1083,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 15,
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "js/main.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 2827,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								2827,
+								2827
 							]
 						],
 						"settings":
@@ -595,14 +731,14 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 1090.0,
+						"translation.y": 541.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 0,
+					"stack_index": 1,
 					"type": "text"
 				},
 				{
-					"buffer": 2,
+					"buffer": 4,
 					"file": "app/core/model.class.php",
 					"semi_transient": false,
 					"settings":
@@ -624,27 +760,175 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 1188.0,
+						"translation.y": 54.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 3,
+					"stack_index": 4,
 					"type": "text"
 				},
 				{
-					"buffer": 3,
-					"file": "css/styles.css",
+					"buffer": 5,
+					"file": "app/models/rant.class.php",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 10445,
+						"buffer_size": 1803,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								7534,
-								7534
+								1800,
+								1800
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 14,
+					"type": "text"
+				},
+				{
+					"buffer": 6,
+					"file": "home.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 8318,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								7621,
+								7621
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 3864.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 9,
+					"type": "text"
+				},
+				{
+					"buffer": 7,
+					"file": "reg.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 552,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 5,
+					"type": "text"
+				},
+				{
+					"buffer": 8,
+					"file": "post.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 611,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								578,
+								578
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 8,
+					"type": "text"
+				},
+				{
+					"buffer": 9,
+					"file": "app/core/db.class.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 7144,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								5,
+								5
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 7,
+					"type": "text"
+				},
+				{
+					"buffer": 10,
+					"file": "css/styles.css",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 10697,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								5777,
+								5777
 							]
 						],
 						"settings":
@@ -654,10 +938,39 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 10192.0,
+						"translation.y": 7562.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 2,
+					"stack_index": 6,
+					"type": "text"
+				},
+				{
+					"buffer": 11,
+					"file": "login.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 7,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								7,
+								7
+							]
+						],
+						"settings":
+						{
+							"auto_name": "login.php",
+							"syntax": "Packages/PHP/PHP.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 10,
 					"type": "text"
 				}
 			]
@@ -667,20 +980,20 @@
 			"sheets":
 			[
 				{
-					"buffer": 4,
-					"file": "home.php",
+					"buffer": 12,
+					"file": "css/account.php",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 8312,
+						"buffer_size": 2696,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								2971,
-								2971
+								1647,
+								788
 							]
 						],
 						"settings":
@@ -689,15 +1002,15 @@
 							"tab_size": 4,
 							"translate_tabs_to_spaces": true
 						},
-						"translation.x": 60.0,
-						"translation.y": 1804.0,
+						"translation.x": 0.0,
+						"translation.y": 572.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 1,
+					"stack_index": 0,
 					"type": "text"
 				},
 				{
-					"buffer": 5,
+					"buffer": 13,
 					"file": "app/views/primary_header.php",
 					"semi_transient": false,
 					"settings":
@@ -720,27 +1033,57 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 81.0,
-						"translation.y": 390.0,
+						"translation.y": 215.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 5,
+					"stack_index": 12,
 					"type": "text"
 				},
 				{
-					"buffer": 6,
+					"buffer": 14,
 					"file": "index.php",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 2831,
+						"buffer_size": 2882,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								327,
-								327
+								982,
+								982
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 73.0,
+						"translation.y": 796.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 11,
+					"type": "text"
+				},
+				{
+					"buffer": 15,
+					"file": "/var/www/danny/htdocs/3rd-degree/login.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1767,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								101,
+								101
 							]
 						],
 						"settings":
@@ -753,7 +1096,7 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 6,
+					"stack_index": 13,
 					"type": "text"
 				}
 			]
@@ -787,7 +1130,7 @@
 		"cols":
 		[
 			0.0,
-			0.456066637842,
+			0.42245341968,
 			1.0
 		],
 		"rows":
@@ -842,7 +1185,7 @@
 	"show_open_files": true,
 	"show_tabs": true,
 	"side_bar_visible": true,
-	"side_bar_width": 174.0,
+	"side_bar_width": 140.0,
 	"status_bar_visible": true,
 	"template_settings":
 	{

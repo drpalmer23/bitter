@@ -57,9 +57,8 @@ extract($controller->view->vars);
               <div class="text">
                   <form id="new-post" action="post_comment.php" method="POST">
                     <textarea name="new-post" form="new-post" class="new-post" cols="30" rows="10" maxlength="255" placeholder="Write New Rant..." required></textarea>
-                    <!-- <input type="text" class="new-post" value="Lorem ipsum dolor sit amet, nonummy ligula volutpat hac integer nonummy. Suspendisse ultricies, congue etiam tellus, erat libero, nulla eleifend, mauris pellentesque. Suspendisse integer praesent vel, integer gravida mauris, fringilla vehicula lacinia non" name="new-post" placeholder="Write New Rant..." required> -->
                     <div class="post-options">
-                        <button type="submit">Post  Rant</button>
+                    <button type="submit">Post  Rant</button>
                     </div>
                   </form>
               </div> 
@@ -199,4 +198,3 @@ extract($controller->view->vars);
 </div>
 
 </body>
-</html>

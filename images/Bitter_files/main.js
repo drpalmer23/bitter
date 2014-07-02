@@ -98,7 +98,6 @@ if(window.addEventListener){
     {
       container.hide();
       $('#reset-pw').show();
-      $('.error-message').remove();
     }
   });
 

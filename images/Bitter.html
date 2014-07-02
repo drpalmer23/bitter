@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<!-- saved from url=(0035)http://danny.com/bitter/account.php -->
+<html class=" js flexbox flexboxlegacy canvas canvastext webgl no-touch geolocation postmessage websqldatabase indexeddb hashchange history draganddrop websockets rgba hsla multiplebgs backgroundsize borderimage borderradius boxshadow textshadow opacity cssanimations csscolumns cssgradients cssreflections csstransforms csstransforms3d csstransitions fontface generatedcontent video audio localstorage sessionstorage webworkers applicationcache svg inlinesvg smil svgclippaths"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, minimal-ui">
+	<title>Bitter</title>
+	<link rel="shortcut icon" href="./Bitter_files/crowThumb.png">
+    
+    <link href="./Bitter_files/css" rel="stylesheet" type="text/css">
+	<link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+	<!-- Main CSS -->
+	<link rel="stylesheet" href="http://danny.com/bitter/css/styles.css">
+
+	<!-- Payload CSS -->
+	
+	<!-- Modernizr -->
+	<script src="./Bitter_files/modernizr.js"></script>
+
+</head>
+<body class="account">
+
+	<div class="page">
+		<header>
+<div class="header">
+<div class="container">
+
+        <div class="left-menu">
+            <span class="navigation">
+                <a href="" class="home-nav">
+                    <span class="icon">Icon</span>
+                    <span class="icon-name">Home</span>
+                </a>
+                <a href="" class="alert-nav">
+                    <span class="icon">Icon</span>
+                    <span class="icon-name">Notifications</span>
+                </a>
+                <a href="" class="me-nav">
+                    <span class="icon">Icon</span>
+                    <span class="icon-name">Me</span>
+                </a>
+            </span>
+        </div>
+
+        <a class="logo-link" href="http://danny.com/bitter/account.php#">
+            <span class="logo">
+                <img src="./Bitter_files/crowThumb.png">
+            </span>
+        </a>
+
+        <div class="right-menu">
+            <span class="search-bar">
+                <form class="search">
+                    <input class="search" name="search" placeholder="Search">
+                    <button class="search"><i class="fa fa-search"></i></button>
+                </form> 
+            </span>  
+            <div class="menu">icon
+                <div class="menu-content" style="display: none;">
+                    <a class="profile" href="http://danny.com/bitter/account.php#">My Profile</a>
+                    <a class="account" href="http://danny.com/bitter/account.php#">Edit Account</a>
+                    <a class="log-out" href="http://danny.com/bitter/account.php#">Log Out</a>
+                </div>
+            </div>
+            <!-- need messaging, settings added later -->
+        </div>
+    </div>
+</div>
+</header>		
+<div class="main">
+    <div class="container">
+        <div class="left-boxes">
+
+            <div class="user-summary">
+                <div class="cover-photo">Add Cover Photo</div>
+                <div class="profile-photo">
+                    <img src="./Bitter_files/blankprofilepic.jpg" alt="Add Profile Photo">
+                </div>
+
+                <div class="names">
+                    <p class="full-name">Bobby Bittersworth</p>
+                    <p class="user-name">@BitterBob</p>
+                </div>
+
+                <div class="user-activity">
+                    <span class="rant-count">
+                        <div class="title">Rants</div>
+                        <div class="number">1204</div>
+                    </span>  
+                    <span class="following-count"> 
+                        <div class="title">Following</div>
+                        <div class="number">163</div>
+                    </span>   
+                    <span class="follower-count">
+                        <div class="title">Followers</div>
+                        <div class="number">34</div>
+                    </span>
+                </div>
+            </div>
+            <div class="bio">
+                <h1>Bio</h1>
+                <p>Update your bio</p>
+                <form id="bio" action="" method="POST">
+                    <textarea name="bio" form="bio" class="bio-text" cols="30" rows="10" maxlength="255" placeholder="Write a bit about yourself..." value="" required=""></textarea>
+                    <button type="submit">Save Bio</button>
+                </form>
+            </div>
+        </div>
+
+        <div class="account-info">
+            <h1>Account</h1>
+            <p>Update your account settings</p>
+            <form class="reptile-form update-account" action="./Bitter_files/Bitter.html" method="POST" novalidate="novalidate">
+                <div class="field first-name required text"><div class="title">First Name:</div><div class="field-input"><input type="text" class="first-name" name="first-name" value="" required=""></div></div>
+                <div class="field last-name required text"><div class="title">Last Name:</div><div class="field-input"><input type="text" class="last-name" name="last-name" value="" required=""></div></div>
+                <div class="field username required text"><div class="title">Username:</div><div class="field-input"><input type="text" class="username" name="username" value="" required=""></div></div>
+                <div class="field email required text"><div class="title">Email:</div><div class="field-input"><input type="email" class="email" name="email" value="" required=""></div></div>
+                <div class="field dob required text"><div class="title">Birthdate:</div><div class="field-input"><input type="date" class="dob" name="dob" value="" required=""></div></div>
+                <button type="submit">Save</button>
+            </form>
+        </div>
+
+
+        <div class="password-reset">
+            <h1>Reset Password</h1>
+            <div class="button">
+                <button id="reset-pw" style="display: inline-block;">Reset Password</button>
+            </div>
+            <form action="./Bitter_files/Bitter.html" class="reptile-form pw-reset" method="POST" novalidate="novalidate" style="display: none;">
+                <div class="field password required text"><div class="title">Current Password:</div><div class="field-input"><input type="password" class="password" name="password" required=""></div></div>
+                <div class="field new-password required text"><div class="title">New Password:</div><div class="field-input"><input type="password" class="new-password" name="new-password" required=""></div></div>
+                <div class="field confirm-pw required text"><div class="title">Confirm New Password:</div><div class="field-input"><input type="password" class="confirm-pw" name="confirm-pw" required=""></div></div>
+                <button type="submit" id="save-pw">Save Password</button>
+            </form>
+        </div>
+
+    </div>
+</div>
+	</div>
+
+	<!-- Include Common Scripts -->
+	<script src="./Bitter_files/jquery.js"></script>
+	<script src="./Bitter_files/reptileforms.js"></script>
+
+	<!-- Get JS -->
+	<script>var app = {};app.settings={"live_site":false};</script>
+		
+	<!-- Main JS -->
+	<script src="./Bitter_files/main.js"></script>
+
+
+</body></html>
