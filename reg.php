@@ -15,7 +15,7 @@ class Controller extends AjaxController {
 		// which can can be accessed as follows. This array will be
 		// converted to JSON when this script ends and sent to the client
 		// automatically
-		$this->view['response'] = 'User ' . $user->first_name . ' was successfully created';
+		$this->view['redirect'] = 'account.php';
 
 	}
 

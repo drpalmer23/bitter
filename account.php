@@ -1,5 +1,12 @@
 <?php
 
+// session_start();
+// 
+// if (!isset($_SESSION['user_id'])) {
+//     header('Location: index.php');
+//     exit();
+// }
+
 // Init
 include('app/core/initialize.php');
 
@@ -8,8 +15,7 @@ class Controller extends AppController {
     public function __construct() {
         parent::__construct();
 
-        // Create welcome variable in view
-        $this->view->welcome = 'Welcome to MVC';
+
     }
 
 }
@@ -70,6 +76,7 @@ extract($controller->view->vars);
                 <input type="text" title="Last Name:" class="last-name" name="last-name" value="" required>
                 <input type="text" title="Username:" class="username" name="username" value="" required>
                 <input type="email" title="Email:" class="email" name="email" value="" required>
+                <input type="text" title="Zip Code:" class="zip" name="zip" value="">
                 <input type="date" title="Birthdate:" class="dob" name="dob" value="" required>
                 <button type="submit">Save</button>
             </form>
@@ -88,6 +95,14 @@ extract($controller->view->vars);
                 <input type="password" title="Confirm New Password:" class="confirm-pw" name="confirm-pw" required>
                 <button type="submit" id="save-pw">Save Password</button>
             </form>
+        </div>
+        
+        <div class="delete-account">
+            <h1>Delete Account</h1>
+            <p>Click button to leave Bitter</p>
+            <div class="button">
+                <button id="delete-account">Delete Account</button>
+            </div>
         </div>
 
     </div>

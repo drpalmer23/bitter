@@ -83,6 +83,16 @@ if(window.addEventListener){
   }
   });
 
+//----------post new rant to rant list--------------
+  var comment = $('.new-post').val();
+  $('#post-rant').on('click', function(){
+    if(comment!=null){
+      $('.rant-list').append('<div>' + hello + '</div>');
+    } else {
+      $('textarea').after('<div class="error-message">Must write new rant</div>');
+    }
+  })
+
 //----------hide/show pw reset button/form----------
   $('.pw-reset').hide();
 
@@ -101,6 +111,14 @@ if(window.addEventListener){
       $('.error-message').remove();
     }
   });
+
+//-----------Delete Account Alert-------------------
+  $('#delete-account').click( function() {
+    alert('Once deleted, you cannot get your account back! Are you sure you want to delete your account?');
+  });
+
+//-----------Hide/show new tweets notifications---------
+  $('.new-rants').hide();
 
 // ----------Use Reptile Forms-------------------
   var form = new ReptileForm('.reptile-form', {
@@ -122,8 +140,8 @@ if(window.addEventListener){
     submitSuccess: function(data) {
 
       // Handle successful submissions any way you want
-      if (data.response) {
-        this.el.before('<p>' + data.response + '</p>');
+      if (data.redirect) {
+        location.href = data.redirect;
       }
 
     }

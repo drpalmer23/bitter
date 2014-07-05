@@ -79,4 +79,28 @@ class User extends Model {
 
 	}
 
+
+	/**
+	 * Who to follow list
+	 */
+
+    public static function getMiniProfiles($row) {
+
+         $wtf_html = '<div class="mini-profile">
+                        <img class="user-pic" src="images/blankprofilepic.jpg">
+                        <div class="user-info">
+                            <div class="name">{{first_name}} {{last_name}}</div>
+                            <div class="user-name">@{{username}}</div> 
+                        <button class="follow">Follow</button>
+                        </div>
+                    </div>';
+                   
+        $wtf_html = str_replace('{{first_name}}', $row['first_name'], $wtf_html);
+        $wtf_html = str_replace('{{last_name}}', $row['last_name'], $wtf_html);
+        $wtf_html = str_replace('{{username}}', $row['user_name'], $wtf_html);
+        
+        return $wtf_html;
+    }
+
+
 }

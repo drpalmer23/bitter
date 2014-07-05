@@ -15,7 +15,7 @@ class Controller extends AjaxController {
         // which can can be accessed as follows. This array will be
         // converted to JSON when this script ends and sent to the client
         // automatically
-        $this->view['response'] = 'Rant ' . $rant->rant_id . ' was successfully created';
+        // $this->view['response'] = 'Rant ' . $rant->rant_id . ' was successfully created';
 
     }
 

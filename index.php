@@ -1,16 +1,38 @@
 <?php
 
+// session_start();
+
+// $email = $_POST['email'];
+// $pw = $_POST['password'];
+
+// $sql = "
+// SELECT user_id, email, user_name, password
+// FROM user
+// WHERE email=\"{$email}\"
+// AND password = \"{$pw}\"
+// ";
+
+// $results = db::execute($sql);
+
+// $row = $results->fetch_assoc();
+
+// if (count($row==0)) {
+//     die("can't login");
+// } else {
+//     $_SESSION['user_id']=$row['user_id'];
+// }
+
 // Init
 include('app/core/initialize.php');
 
 // Controller
 class Controller extends AppController {
-	public function __construct() {
-		parent::__construct();
+    public function __construct() {
+        parent::__construct();
 
-		// Create welcome variable in view
-		$this->view->welcome = 'Welcome to MVC';
-	
+        // Create welcome variable in view
+        // $this->view->welcome = 'Welcome to MVC';
+    
         // // Add Files Payload
         // Payload::js('js/testing.js');
     }

@@ -31,39 +31,44 @@ class Rant extends Model {
 
     }
 
-    /**
-     * Update User. Note that this method is used in object context because
-     * we should already have a user object before we update:
-     *
-     * Example:
-     * $user = new User(1);
-     * $user->update($values);
-     */
-    // public function update($input) {
+    public static function getCommentAge($row) {
+        $t = time();
+        $commentDate = $row['created_time'];
+        $age = ($commentDate < 0) ? ( $t + ($commentDate * -1) ) : $t - $commentDate;
+        $rantAge = floor($age/31536000);
+        return $rantAge;
+    }
 
-    //     // Note that Server Side validation is not being done here
-    //     // and should be implemented by you
+    public static function getRant($row) {
 
 
-    //     // Prepare SQL Values
-    //     $sql_values = [
-    //         'first_name' => $input['first-name'],
-    //         'last_name' => $input['last-name'],
-    //         'user_name' => $input['username'],
-    //         'email' => $input['email'],
-    //         'password' => $input['password'],
-    //         'dob' => $input['dob']
-    //     ];
+        $rant_html = '<div class="rant">
+                    <img class="user-pic" src="images/blankprofilepic.jpg">
+                    <div class="content">
+                        <span class="full-name">
+                            <span class="first-name">{{first_name}}</span> 
+                            <span class="last-name">{{last_name}}</span>
+                        </span>
+                        <span class="user-name">@{{username}}</span>
+                        <span class="rant-age">{{age}}</span>
+                        <p class="comment">
+                            {{comment}}
+                        </p>
+                        <div class="footer">
+                            <a href="#" class="reply">
+                                <span class="icon">X</span>
+                                <span class="icon-name">Reply</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>';
 
-    //     // Ensure values are encompased with quote marks
-    //     $sql_values = db::array_in_quotes($sql_values);
-
-    //     // Insert
-    //     $results = db::insert('rant', $sql_values, "WHERE user_id = {$this->user_id}");
-        
-    //     // Return a new instance of this user as an object
-    //     return new User($this->user_id);
-
-    // }
+        $rant_html = str_replace('{{first_name}}', $row['first_name'], $rant_html);
+        $rant_html = str_replace('{{last_name}}', $row['last_name'], $rant_html);
+        $rant_html = str_replace('{{username}}', $row['user_name'], $rant_html);
+        $rant_html = str_replace('{{age}}', $rantAge, $rant_html);
+        $rant_html = str_replace('{{comment}}', $row['comment'], $rant_html);
+        return $rant_html;
+    }
 
 }

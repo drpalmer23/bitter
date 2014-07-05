@@ -1,5 +1,12 @@
 <?php
 
+// session_start();
+// 
+// if (!isset($_SESSION['user_id'])) {
+//     header('Location: index.php');
+//     exit();
+// }
+
 // Init
 include('app/core/initialize.php');
 
@@ -7,9 +14,45 @@ include('app/core/initialize.php');
 class Controller extends AppController {
     public function __construct() {
         parent::__construct();
+        
+        $page_title = 'Bitter';
 
-        // Create welcome variable in view
-        $this->view->welcome = 'Welcome to MVC';
+        //show user info in user summary for this session
+            $user = new User($_SESSION['user_id']);
+
+            $this->view->user = $user;
+
+        //sql query and function to get all rants
+            $sql = "
+                SELECT *
+                FROM rant
+                LEFT JOIN user USING (user_id)
+                ORDER BY rant_id DESC
+                ";
+
+            $rant_results = db::execute($sql);
+
+            while ($row = $rant_results->fetch_assoc()) {
+                $rant_html .= Rant::getRant($row);
+            }
+
+            $this->view->rant_html = $rant_html;
+
+        //sql query and function to get who to follow list
+            $sql = "
+            SELECT user_name, first_name, last_name
+            FROM user
+            ORDER BY user_id DESC
+            LIMIT 4
+            ";
+
+            $wtf_results = db::execute($sql);
+
+            while ($row = $wtf_results->fetch_assoc()) {
+                $wtf_html .= user::getMiniProfiles($row);
+            }
+
+            $this->view->wtf_html = $wtf_html;
     }
 
 }
@@ -27,14 +70,16 @@ extract($controller->view->vars);
         <div class="left-boxes">
 
             <div class="user-summary">
-                <div class="cover-photo">Add Cover Photo</div>
+                <div class="cover-photo">
+                    <img src="images/palm.jpg" alt="Add Cover Photo">
+                </div>
                 <div class="profile-photo">
-                    <img src="images/blankprofilepic.jpg" alt="Add Profile Photo">
+                    <img src="images/profile.jpg" alt="Add Profile Photo">
                 </div>
 
                 <div class="names">
-                    <p class="full-name">Bobby Bittersworth</p>
-                    <p class="user-name">@BitterBob</p>
+                    <p class="full-name"><?php echo $user->first_name; ?> <?php echo $user->last_name; ?></p>
+                    <p class="user-name">@<?php echo $user->user_name; ?></p>
                 </div>
 
                 <div class="user-activity">
@@ -55,10 +100,10 @@ extract($controller->view->vars);
 
             <div class="write-new">
               <div class="text">
-                  <form id="new-post" action="post_comment.php" method="POST">
-                    <textarea name="new-post" form="new-post" class="new-post" cols="30" rows="10" maxlength="255" placeholder="Write New Rant..." required></textarea>
+                  <form id="new-post"  action="post.php" method="POST">
+                    <textarea name="new-post" form="new-post" class="new-post" cols="30" rows="10" maxlength="255" placeholder="Write New Rant Here..." required></textarea>
                     <div class="post-options">
-                    <button type="submit">Post  Rant</button>
+                    <button id="post-rant" type="submit">Post</button>
                     </div>
                   </form>
               </div> 
@@ -85,105 +130,21 @@ extract($controller->view->vars);
             </div>
         </div>
 
-        <div class="rants-stream">
+        <div class="rants-raves">
             <h1>Rants &amp; Raves</h1>
             <div class="new-rants">
                 <span># new rants</span>
             </div>
-            <div class="rant">
-                <img class="user-pic" src="">
-                <div class="content">
-                    <span class="full-name">mmmmmmmmmmmmmmmmmm mmmmmmmmmmmmmmm</span>
-                    <span class="user-name">@mmmmmmmmmmmmmmm</span>
-                    <span class="rant-age">365days</span>
-                    <p class="comment">
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. At odit amet iste itaque maiores temporibus similique cumque, maxime molestias consequatur.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Similique possimus, provident deserunt cupiditate. Excepturi quidem aliquid similique expedita facilis maxime.
-                    </p>
-                    <div class="footer">
-                        <a href="#" class="reply">
-                            <span class="icon">X</span>
-                            <span class="icon-name">Reply</span>
-                        </a>
-                        <!-- future share, favorite buttons here -->
-                    </div>
-                </div>
-            </div>   
-
-            <div class="rant">
-                <img class="user-pic" src="">
-                <div class="content">
-                    <span class="full-name">
-                        <span class="first-name">Bobby</span> 
-                        <span class="last-name">Bittersworth</span>
-                    </span>
-                    <span class="user-name">@BitterBob</span>
-                    <span class="rant-age">2m</span>
-                    <p class="comment">
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Similique possimus, provident deserunt cupiditate. Excepturi quidem aliquid similique expedita facilis maxime.
-                    </p>
-                    <div class="footer">
-                        <a href="#" class="reply">
-                            <span class="icon">X</span>
-                            <span class="icon-name">Reply</span>
-                        </a>
-                        <!-- future share, favorite buttons here -->
-                    </div>
-                </div>
-            </div>    
-
-            <div class="rant">
-                <div class="user-pic">
-                    <img src="">
-                </div>
-                <div class="content">
-                    <span class="full-name">
-                        <span class="first-name">Bobby</span> 
-                        <span class="last-name">Bittersworth</span>
-                    </span>
-                    <span class="user-name">@BitterBob</span>
-                    <span class="rant-age">2m</span>
-                    <p class="comment">
-                        Lorem ipsum dolor sit amet.
-                    </p>
-                    <div class="footer">
-                        <a href="#" class="reply">
-                            <span class="icon">X</span>
-                            <span class="icon-name">Reply</span>
-                        </a>
-                        <!-- future share, favorite buttons here -->
-                    </div>
-                </div>
-            </div>             
+            <div class="rant-list">
+            <?php echo $rant_html; ?>         
+            </div>           
         </div>
 
         <div class="right-boxes">
             <div class="who-to-follow">
                 <h1>Who to Follow</h1>
                 <div>
-                    <div>
-                        <img class="user-pic" src="">
-                        <span class="full-name">MMmmmmmmmmmmmmmmm mmmmmmmmmmmmmmmm</span>
-                        <span class="user-name">@mmmmmmmmmmmmmmm</span> 
-                        <button class="follow">Follow</button>
-                    </div>  
-                    <div>
-                        <img class="user-pic" src="">
-                        <span class="full-name">MMmmmmmmmmmmmmmmm mmmmmmmmmmmmmmmm</span>
-                        <span class="user-name">@mmmmmmmmmmmmmmm</span> 
-                        <button class="follow">Follow</button>
-                    </div>  
-                    <div>
-                        <img class="user-pic" src="">
-                        <span class="full-name">MMmmmmmmmmmmmmmmm mmmmmmmmmmmmmmmm</span>
-                        <span class="user-name">@mmmmmmmmmmmmmmm</span> 
-                        <button class="follow">Follow</button>
-                    </div>  
-                    <div>
-                        <img class="user-pic" src="">
-                        <span class="full-name">MMmmmmmmmmmmmmmmm mmmmmmmmmmmmmmmm</span>
-                        <span class="user-name">@mmmmmmmmmmmmmmm</span> 
-                        <button class="follow">Follow</button>
-                    </div>  
+                <?php echo $wtf_html; ?>
                 </div>
             </div>          
             <div class="about-bitter">
