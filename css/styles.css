@@ -74,6 +74,7 @@ button {
     font-size: 24px;
     border-radius: 6px;
     margin:0 10px 6px 0px;
+    box-shadow: 2px 2px 4px #000;
 }
 
 textarea:focus {
@@ -412,6 +413,7 @@ body.home, body.account {
     height: 250px;
     position: relative;
     border-radius: 10px 10px 0 0;
+    box-shadow: 4px 4px 4px #000;
 }
 
 .user-summary .cover-photo, .cover-photo img{
@@ -504,6 +506,7 @@ body.home, body.account {
     margin-bottom: 10px;
     position: relative;
     border-radius: 0 0 10px 10px;
+    box-shadow: 4px 4px 4px #000;
 }
 
 
@@ -541,6 +544,7 @@ textarea.new-post {
     min-height: 250px;
     margin-bottom: 10px;
     border-radius: 10px;
+    box-shadow: 4px 4px 4px #000;
 }
 
 .trends a {
@@ -561,6 +565,7 @@ textarea.new-post {
     margin-right: 10px; 
     margin-bottom: 10px;
     border-radius: 10px;
+    box-shadow: 4px 4px 4px #000;
 }
 
 .rants-raves h1 {
@@ -594,7 +599,7 @@ textarea.new-post {
 }
 
 .rant .content {
-    margin:10px 0 25px 70px;
+    margin:10px 0 10px 70px;
 }
 
 .rant .full-name {
@@ -614,11 +619,15 @@ div.rant span.user-name {
     margin-left: 15px;
 }
 
+.rant .footer {
+    display: block;
+    padding-right: 20px;
+    width: 100%;
+    text-align: right;
+}
 
-.rant .footer .reply {
-    position: absolute;
-    bottom:0;
-    right: 40px;
+.fa-reply {
+    font-size: 14px;
 }
 
 .right-boxes {
@@ -635,6 +644,7 @@ div.rant span.user-name {
     margin-bottom: 10px;
     float:left;
     border-radius: 10px;
+    box-shadow: 4px 4px 4px #000;
 }
 
 .mini-profile {
@@ -691,6 +701,7 @@ div.rant span.user-name {
     float:left;
     clear:left;
     border-radius: 10px;
+    box-shadow: 4px 4px 4px #000;
 }
 
 .about-bitter div {
@@ -722,6 +733,7 @@ div.rant span.user-name {
     margin-top: 10px;
     float:left;
     border-radius: 10px;
+    box-shadow: 4px 4px 4px #000;
 }
 
 .account .bio p, .account-info p, .password-reset p, .delete-account p  {
@@ -753,7 +765,7 @@ textarea.bio-text {
     float:left;
     width: 290px;
     border-radius: 10px;
-
+    box-shadow: 4px 4px 4px #000;
 }
 
 .account-info form div {
@@ -783,6 +795,7 @@ textarea.bio-text {
     float: left;
     margin: 0 0 10px 10px;
     border-radius: 10px;
+    box-shadow: 4px 4px 4px #000;
 }
 
 .password-reset form div {

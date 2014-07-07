@@ -58,7 +58,7 @@ class Rant extends Model {
                         </p>
                         <div class="footer">
                             <a href="#" class="reply">
-                                <span class="icon">X</span>
+                                <span class="icon"><i class="fa fa-reply"></i></span>
                                 <span class="icon-name">Reply</span>
                             </a>
                         </div>
