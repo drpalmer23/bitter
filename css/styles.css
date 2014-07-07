@@ -245,6 +245,7 @@ button.search {
     background-color: transparent;
     border:none;
     color: black;
+    box-shadow: none;
 }
 
 .menu-content button.log-out:hover {
