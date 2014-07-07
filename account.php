@@ -68,8 +68,8 @@ extract($controller->view->vars);
             <div class="bio">
                 <h1>Bio</h1>
                 <p>Update your bio</p>
-                <form id="bio" action="" method="POST">
-                    <textarea name="bio" form="bio" class="bio-text" cols="30" rows="10" maxlength="255" placeholder="Write a bit about yourself..." value="" required></textarea>
+                <form id="bio" action="updatebio.php" method="POST">
+                    <textarea name="bio-text" form="bio" class="bio-text" cols="30" rows="10" maxlength="255" placeholder="Write a bit about yourself..." required><?php echo $user->bio; ?></textarea>
                     <button type="submit">Save Bio</button>
                 </form>
             </div>
@@ -83,7 +83,7 @@ extract($controller->view->vars);
                 <input type="text" title="Last Name:" class="last-name" name="last-name" value="<?php echo $user->last_name; ?>" required>
                 <input type="text" title="Username:" class="username" name="username" value="<?php echo $user->user_name; ?>" required>
                 <input type="email" title="Email:" class="email" name="email" value="<?php echo $user->email; ?>" required>
-                <input type="text" title="Zip Code:" class="zip" name="zip" value="<?php echo $user->zip; ?>">
+                <input type="text" title="Zip Code:" class="zip" name="zip" placeholder="enter zip" value="<?php echo $user->zip; ?>">
                 <input type="date" title="Birthdate:" class="dob" name="dob" value="<?php echo $user->dob; ?>" required>
                 <button type="submit">Save</button>
             </form>

@@ -106,6 +106,30 @@ class User extends Model {
 		return new User($this->user_id);
 	}
 
+	public function updateBio($input) {
+
+		// Note that Server Side validation is not being done here
+		// and should be implemented by you
+
+
+		// Prepare SQL Values
+		$sql_values = [
+			'user_id' => $_SESSION['user_id'],
+			'bio' => $input['bio-text']
+		];
+
+		// Ensure values are encompased with quote marks
+		$sql_values = db::array_in_quotes($sql_values);
+
+		// Insert
+		$results = db::insert_duplicate_key_update('user', $sql_values, 'WHERE user_id =\'{$this->user_id}\'');
+		
+		// Return a new instance of this user as an object
+		return new User($this->user_id);
+
+	}
+
+
 	/**
 	 * Who to follow list
 	 */
