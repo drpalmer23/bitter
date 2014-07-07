@@ -1,10 +1,4 @@
 <?php
-session_start();
-
-if (!isset($_SESSION['user_id'])) {
-    header('Location: index.php');
-    exit();
-}
 
 /**
  *  db class to implement singleton pattern on top of mysqli
@@ -198,6 +192,25 @@ class db extends mysqli {
 
 	}
 
+	// delete rants from user
+	public static function deleteUserRants($user_id){
+		$sql = "
+			DELETE FROM rant
+			WHERE user_id = \"{$_SESSION['user_id']}\"
+			";
+		// Execute Query
+		return self::execute($sql);
+	}
+
+	// delete user
+	public static function deleteUser($user_id) {
+		$sql ="
+			DELETE FROM user
+			WHERE user_id = \"{$_SESSION['user_id']}\"
+		";
+		// Execute Query
+		return self::execute($sql);
+	}
 
 	/****************************************
 	*    UTILITIES                          *

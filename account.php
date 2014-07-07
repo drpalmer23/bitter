@@ -108,7 +108,10 @@ extract($controller->view->vars);
             <h1>Delete Account</h1>
             <p>Click button to leave Bitter</p>
             <div class="button">
-                <button id="delete-account">Delete Account</button>
+                <form id="delete-user" action="delete_user.php" method="POST">
+                    <button id="delete-account" type="submit">Delete Account</button>
+                    <input type='hidden' name='action' value='delete'>
+                </form>
             </div>
         </div>
 

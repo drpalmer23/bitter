@@ -99,7 +99,7 @@ extract($controller->view->vars);
 
             <div class="write-new">
               <div class="text">
-                  <form id="new-post"  action="post.php" method="POST">
+                  <form id="new-post" action="post.php" method="POST">
                     <textarea name="new-post" form="new-post" class="new-post" cols="30" rows="10" maxlength="255" placeholder="Write New Rant Here..." required></textarea>
                     <div class="post-options">
                     <button id="post-rant" type="submit">Post</button>

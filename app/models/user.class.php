@@ -1,5 +1,4 @@
 <?php
-
 session_start();
 /**
  * User
@@ -45,6 +44,10 @@ class User extends Model {
 
 	}
 
+    // public function deleteUser($row) {
+
+    // }
+
 	/**
 	 * Update User. Note that this method is used in object context because
 	 * we should already have a user object before we update:
@@ -61,6 +64,7 @@ class User extends Model {
 
 		// Prepare SQL Values
 		$sql_values = [
+			'user_id' => $_SESSION['user_id'],
 			'first_name' => $input['first-name'],
 			'last_name' => $input['last-name'],
 			'user_name' => $input['username'],
@@ -73,7 +77,7 @@ class User extends Model {
 		$sql_values = db::array_in_quotes($sql_values);
 
 		// Insert
-		$results = db::update('user', $sql_values, 'WHERE user_id =\'{$this->user_id}\'');
+		$results = db::insert_duplicate_key_update('user', $sql_values, 'WHERE user_id =\'{$this->user_id}\'');
 		
 		// Return a new instance of this user as an object
 		return new User($this->user_id);
@@ -88,6 +92,7 @@ class User extends Model {
 
 		// Prepare SQL Values
 		$sql_values = [
+			'user_id' => $_SESSION['user_id'],
 			'password' => $input['password']
 		];
 
@@ -95,7 +100,7 @@ class User extends Model {
 		$sql_values = db::array_in_quotes($sql_values);
 
 		// Insert
-		$results = db::update('user', $sql_values, 'WHERE user_id = \'{$this->user_id}\'');
+		$results = db::insert_duplicate_key_update('user', $sql_values, 'WHERE user_id = \'{$this->user_id}\'');
 		
 		// Return a new instance of this user as an object
 		return new User($this->user_id);
