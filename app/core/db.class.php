@@ -1,4 +1,10 @@
 <?php
+session_start();
+
+if (!isset($_SESSION['user_id'])) {
+    header('Location: index.php');
+    exit();
+}
 
 /**
  *  db class to implement singleton pattern on top of mysqli

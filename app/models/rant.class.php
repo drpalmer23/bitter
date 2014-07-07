@@ -1,6 +1,11 @@
 <?php
 
-/**
+session_start();
+
+if (!isset($_SESSION['user_id'])) {
+    header('Location: index.php');
+    exit();
+}/**
  * Rant
  */
 class Rant extends Model {
@@ -14,7 +19,8 @@ class Rant extends Model {
 
         // Prepare SQL Values
         $sql_values = [
-            'comment' => $input['new-post'],
+            'user_id' =>$_SESSION['user_id'],
+            'comment' => $input['new-post']
         ];
 
         // Ensure values are encompased with quote marks

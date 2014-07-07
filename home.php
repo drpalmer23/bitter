@@ -1,11 +1,11 @@
 <?php
 
-// session_start();
-// 
-// if (!isset($_SESSION['user_id'])) {
-//     header('Location: index.php');
-//     exit();
-// }
+session_start();
+
+if (!isset($_SESSION['user_id'])) {
+    header('Location: index.php');
+    exit();
+}
 
 // Init
 include('app/core/initialize.php');
@@ -15,7 +15,6 @@ class Controller extends AppController {
     public function __construct() {
         parent::__construct();
         
-        $page_title = 'Bitter';
 
         //show user info in user summary for this session
             $user = new User($_SESSION['user_id']);

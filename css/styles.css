@@ -230,10 +230,25 @@ button.search {
     border: 1px solid black;
     background-color: #eee;
     border-radius: 10px;
+    text-align: left;
 }
 
 .menu-content a {
     display: block;
+}
+
+.menu-content button.log-out {
+    display:block;
+    margin:0;
+    padding :0;
+    background-color: transparent;
+    border:none;
+    color: black;
+}
+
+.menu-content button.log-out:hover {
+     color: #ff822e;
+     cursor: pointer;
 }
 /******* end header *********/
 
@@ -369,7 +384,7 @@ button.register { /**/
 
  /********** begin structure for home page **********/
 body.home, body.account {
-    background-color: #000;
+    background-image: url('/bitter/images/diagmonds.png');
 }
 
 .home .main .container, .account .main .container { 
@@ -393,7 +408,7 @@ body.home, body.account {
 }
 
 .user-summary {
-    background-color: rgba(250, 250, 250, 0.8);
+    background-color: #eee;
     height: 250px;
     position: relative;
     border-radius: 10px 10px 0 0;
@@ -522,7 +537,7 @@ textarea.new-post {
 }
 
 .trends {
-    background-color: rgba(250, 250, 250, 0.8);
+    background-color: #eee;
     min-height: 250px;
     margin-bottom: 10px;
     border-radius: 10px;
@@ -539,7 +554,7 @@ textarea.new-post {
 }
 
 .rants-raves {
-    background-color: rgba(250, 250, 250, 0.8);
+    background-color: #eee;
     float: left;
     width: 600px;
     min-height: 300px;
@@ -614,7 +629,7 @@ div.rant span.user-name {
 }
 
 .who-to-follow {
-    background-color: rgba(250, 250, 250, 0.8);
+    background-color: #eee;
     width: 290px;
     min-height: 250px; 
     margin-bottom: 10px;
@@ -669,7 +684,7 @@ div.rant span.user-name {
 }
 
 .about-bitter {
-    background-color: rgba(250, 250, 250, 0.8);
+    background-color: #eee;
     width: 290px;
     min-height: 250px; 
     margin-bottom: 10px;
@@ -703,7 +718,7 @@ div.rant span.user-name {
 }
 
 .account .bio {
-    background-color: rgba(250, 250, 250, 0.8);
+    background-color: #eee;
     margin-top: 10px;
     float:left;
     border-radius: 10px;
@@ -734,7 +749,7 @@ textarea.bio-text {
 }
 
 .account-info {
-    background-color: rgba(250, 250, 250, 0.8);
+    background-color: #eee;
     float:left;
     width: 290px;
     border-radius: 10px;
@@ -763,7 +778,7 @@ textarea.bio-text {
 
 
 .password-reset, .delete-account {
-    background-color: rgba(250, 250, 250, 0.8);
+    background-color: #eee;
     width: 290px;
     float: left;
     margin: 0 0 10px 10px;

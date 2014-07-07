@@ -1,26 +1,7 @@
 <?php
 
-// session_start();
-
-// $email = $_POST['email'];
-// $pw = $_POST['password'];
-
-// $sql = "
-// SELECT user_id, email, user_name, password
-// FROM user
-// WHERE email=\"{$email}\"
-// AND password = \"{$pw}\"
-// ";
-
-// $results = db::execute($sql);
-
-// $row = $results->fetch_assoc();
-
-// if (count($row==0)) {
-//     die("can't login");
-// } else {
-//     $_SESSION['user_id']=$row['user_id'];
-// }
+session_start();
+session_destroy();
 
 // Init
 include('app/core/initialize.php');
@@ -59,7 +40,7 @@ extract($controller->view->vars);
                 then Rant along or about others' Rants.</p>
             </div>
             <div class="login">
-                <form class="login-form reptile-form" action="" method="POST">
+                <form class="login-form reptile-form" action="login_process.php" method="POST">
                     <input class="username" title="Username or Email:" type="text" name="username" placeholder="ex: BitterBOB123  or  BOBBY&#64;email.com" required> 
                     <input class="password" title="Password:" type="password" name="password" placeholder="min: 6 characters, 1 number" required>
                     <button class="signin" type="submit">Sign In</button>

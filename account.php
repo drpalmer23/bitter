@@ -1,12 +1,13 @@
 <?php
 
-// session_start();
-// 
-// if (!isset($_SESSION['user_id'])) {
-//     header('Location: index.php');
-//     exit();
-// }
+session_start();
 
+if (!isset($_SESSION['user_id'])) {
+    header('Location: index.php');
+    exit();
+}
+
+$page_title='Bitter';
 // Init
 include('app/core/initialize.php');
 
@@ -14,6 +15,10 @@ include('app/core/initialize.php');
 class Controller extends AppController {
     public function __construct() {
         parent::__construct();
+
+        //show user info in user summary for this session
+        $user = new User($_SESSION['user_id']); 
+        $this->view->user = $user;
 
 
     }
@@ -33,14 +38,16 @@ extract($controller->view->vars);
         <div class="left-boxes">
 
             <div class="user-summary">
-                <div class="cover-photo">Add Cover Photo</div>
+                <div class="cover-photo">
+                    <img src="images/palm.jpg" alt="Add Cover Photo">
+                </div>
                 <div class="profile-photo">
-                    <img src="images/blankprofilepic.jpg" alt="Add Profile Photo">
+                    <img src="images/profile.jpg" alt="Add Profile Photo">
                 </div>
 
                 <div class="names">
-                    <p class="full-name">Bobby Bittersworth</p>
-                    <p class="user-name">@BitterBob</p>
+                    <p class="full-name"><?php echo $user->first_name; ?> <?php echo $user->last_name; ?></p>
+                    <p class="user-name">@<?php echo $user->user_name; ?></p>
                 </div>
 
                 <div class="user-activity">
@@ -71,13 +78,13 @@ extract($controller->view->vars);
         <div class="account-info">
             <h1>Account</h1>
             <p>Update your account settings</p>
-            <form class="reptile-form update-account" action="" method="POST">
-                <input type="text" title="First Name:" class="first-name" name="first-name" value="" required>
-                <input type="text" title="Last Name:" class="last-name" name="last-name" value="" required>
-                <input type="text" title="Username:" class="username" name="username" value="" required>
-                <input type="email" title="Email:" class="email" name="email" value="" required>
-                <input type="text" title="Zip Code:" class="zip" name="zip" value="">
-                <input type="date" title="Birthdate:" class="dob" name="dob" value="" required>
+            <form class="reptile-form update-account" action="update_account.php" method="POST">
+                <input type="text" title="First Name:" class="first-name" name="first-name" value="<?php echo $user->first_name; ?>" required>
+                <input type="text" title="Last Name:" class="last-name" name="last-name" value="<?php echo $user->last_name; ?>" required>
+                <input type="text" title="Username:" class="username" name="username" value="<?php echo $user->user_name; ?>" required>
+                <input type="email" title="Email:" class="email" name="email" value="<?php echo $user->email; ?>" required>
+                <input type="text" title="Zip Code:" class="zip" name="zip" value="<?php echo $user->zip; ?>">
+                <input type="date" title="Birthdate:" class="dob" name="dob" value="<?php echo $user->dob; ?>" required>
                 <button type="submit">Save</button>
             </form>
         </div>
@@ -89,7 +96,7 @@ extract($controller->view->vars);
             <div class="button">
                 <button id="reset-pw">Reset Password</button>
             </div>
-            <form action="" class="reptile-form pw-reset" method="POST">
+            <form action="resetPassword.php" class="reptile-form pw-reset" method="POST">
                 <input type="password" title="Current Password:" class="password" name="password" required>
                 <input type="password" title="New Password:" class="new-password" name="new-password" required>
                 <input type="password" title="Confirm New Password:" class="confirm-pw" name="confirm-pw" required>

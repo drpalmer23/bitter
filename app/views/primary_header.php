@@ -37,7 +37,10 @@
                 <div class="menu-content">
                     <a class="profile" href="#">My Profile</a>
                     <a class="account" href="account.php">Edit Account</a>
-                    <a class="log-out" href="index.php">Log Out</a>
+                    <form id="logOut" action="index.php" method="POST">
+                        <button type='submit' class='log-out' class="log-out" href="">Log Out</button>
+                        <input type='hidden' name='action' value='logOut'>
+                    </form>
                 </div>
             </div>
             <!-- need messaging, settings added later -->
