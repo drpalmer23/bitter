@@ -25,8 +25,8 @@ class Controller extends AppController {
             $sql = "
                 SELECT *
                 FROM rant
-                LEFT JOIN user USING (user_id)
-                ORDER BY rant_id DESC
+                JOIN user USING (user_id)
+                ORDER BY parent_rant_id DESC, rant_id 
                 ";
 
             $rant_results = db::execute($sql);
@@ -73,7 +73,7 @@ extract($controller->view->vars);
                     <img src="images/palm.jpg" alt="Add Cover Photo">
                 </div>
                 <div class="profile-photo">
-                    <img src="images/profile.jpg" alt="Add Profile Photo">
+                    <img src="images/dp.jpg" alt="Add Profile Photo">
                 </div>
 
                 <div class="names">
@@ -149,7 +149,7 @@ extract($controller->view->vars);
             <div class="about-bitter">
                 <h1>About Bitter</h1>
                 <div>
-                    Bitter&#8482; is what you, the user's, make it. Bitter is still in it's early stages of development and working on adding many more applications. <br>
+                    Bitter&#8482; offers a place for you rant, rave, vent, or complain, when your bitter about something. Bitter is still in it's early stages of development and working on adding many more applications. <br>
                     Stay tuned to see what's next. 
                 </div>
             </div>

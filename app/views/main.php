@@ -5,8 +5,8 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, minimal-ui" />
 	<link rel="shortcut icon" href="/bitter/images/crowThumb.png">
-    <!-- <title><?php echo $page_title ?></title> -->
     <title>Bitter</title>
+    <!-- <title><?php echo $page_title ?></title> -->
     <link href='http://fonts.googleapis.com/css?family=Amatic+SC:700,400' rel='stylesheet' type='text/css'>
 	<link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
 	<!-- Main CSS -->

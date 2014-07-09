@@ -14,7 +14,11 @@ class Controller extends AjaxController {
         parent::__construct();
 
         // Save Rant/Comment
-        $rant = Rant::insert($_POST);
+        if(isset($_POST['parent_rant_id'])) {
+            $rant = Rant::insertReply($_POST);
+        } else {
+            $rant = Rant::insertOriginal($_POST);
+        }   
 
         // In the case of the Ajax Controller, the view is an array
         // which can can be accessed as follows. This array will be

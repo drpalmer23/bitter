@@ -592,6 +592,45 @@ textarea.new-post {
     position: relative;
 }
 
+.rant.reply-rant {
+    min-height: 90px;
+    border-top: 1px solid black;
+    background-color: gray;
+}
+
+.reply-rant .rant-container {
+    margin-left:60px;
+}
+
+.rant .write-reply {
+    background-color: #ff822e;
+}
+
+.rant form {
+    width:580px;
+    text-align: right;
+}
+
+.rant textarea {
+    margin: 5px 10px 0 10px;
+    padding: 3px;
+    width: 580px;
+    white-space: pre-wrap;
+    font-size: 22px;
+    height: 80px;
+    background-color: #fff;
+    display: inline-block;
+    border-radius: 4px;
+    resize: none;
+    overflow: hidden;
+}
+
+.rant button {
+    margin: 0 10px 10px 10px;
+    padding: 0 10px;
+    
+}
+
 .user-pic {
     width: 50px;
     height: 50px;
@@ -600,7 +639,7 @@ textarea.new-post {
 }
 
 .rant .content {
-    margin:10px 0 10px 70px;
+    margin:10px 0 0 70px;
 }
 
 .rant .full-name {
@@ -625,6 +664,20 @@ div.rant span.user-name {
     padding-right: 20px;
     width: 100%;
     text-align: right;
+}
+
+.rant .footer>span {
+    font-size: 18px;
+    padding:5px;
+}
+
+.rant .footer>span:hover {
+    color: #ff822e;
+    cursor: pointer;
+}
+
+.fa-comments {
+    font-size:14px;
 }
 
 .fa-reply {

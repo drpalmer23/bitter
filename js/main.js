@@ -120,6 +120,27 @@ if(window.addEventListener){
 //-----------Hide/show new tweets notifications---------
   $('.new-rants').hide();
 
+//----------Make reply box appear when click reply--------
+  $('.write-reply').hide();
+  $('body').on('click', '.reply', function(){
+    var commentBox = $(this).parents('.rant').find('.write-reply');
+    $(commentBox).show();
+  });
+  $(document).mouseup(function (e) {
+    var container = $('.write-reply');
+
+    if (!container.is(e.target) // if the target of the click isn't the container...
+      && container.has(e.target).length === 0) // ... nor a descendant of the container
+    {
+      container.hide();
+    }
+  });
+//---------Make comments appear when click show comments---------
+  $('.rant.reply-rant').hide();
+  $('body').on('click', '.rant .footer .comment', function() {
+    $(this).parents('.rant').siblings('.rant.reply-rant').toggle();
+  });
+
 // ----------Use Reptile Forms-------------------
   var form = new ReptileForm('.reptile-form', {
     validationError: function(err) {

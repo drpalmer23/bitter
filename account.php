@@ -42,7 +42,7 @@ extract($controller->view->vars);
                     <img src="images/palm.jpg" alt="Add Cover Photo">
                 </div>
                 <div class="profile-photo">
-                    <img src="images/profile.jpg" alt="Add Profile Photo">
+                    <img src="images/dp.jpg" alt="Add Profile Photo">
                 </div>
 
                 <div class="names">
@@ -83,7 +83,7 @@ extract($controller->view->vars);
                 <input type="text" title="Last Name:" class="last-name" name="last-name" value="<?php echo $user->last_name; ?>" required>
                 <input type="text" title="Username:" class="username" name="username" value="<?php echo $user->user_name; ?>" required>
                 <input type="email" title="Email:" class="email" name="email" value="<?php echo $user->email; ?>" required>
-                <input type="text" title="Zip Code:" class="zip" name="zip" placeholder="enter zip" value="<?php echo $user->zip; ?>">
+                <input type="text" title="Zip Code:" class="zip" name="zip" placeholder="enter zip" pattern=".{5,}" value="<?php echo $user->zip; ?>">
                 <input type="date" title="Birthdate:" class="dob" name="dob" value="<?php echo $user->dob; ?>" required>
                 <button type="submit">Save</button>
             </form>
