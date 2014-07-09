@@ -37,7 +37,9 @@ extract($controller->view->vars);
                 well, now you have a place to say it."</p>
                 <p>Rant, rave, vent, shout, get it all out. <br>
                 Follow what others are Ranting about,<br>
-                then Rant along or about others' Rants.</p>
+                and Rant along. Bitter is the social site<br>
+                for complaints, bad day stories, or just<br>
+                anything you have to say that's bitter.</p>
             </div>
             <div class="login">
                 <form class="login-form reptile-form" action="login_process.php" method="POST">
