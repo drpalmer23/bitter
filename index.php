@@ -57,7 +57,7 @@ extract($controller->view->vars);
                     <input class="first-name" title="First Name:" type="text" name="first-name" placeholder="ex: Bobby"></input>
                     <input class="last-name" title="Last Name:" type="text" name="last-name" placeholder="ex: Bittersworth">
                     <input class="username" title="Username:" type="text" name="username" placeholder="ex: BitterBOB123" maxlength="15" required>
-                    <input class="email" title="Email:"type="text" name="email" placeholder="ex: BOB&#64;email.com" maxlength="100" required></input>
+                    <input class="email" title="Email:"type="text" name="email" placeholder="ex: BOB&#64;email.com" maxlength="1000" required></input>
                     <input class="password" title="Password:" type="password" name="password" placeholder="min: 6 characters, 1 number" required></input>
                     <input class="dob" title="Birthdate:" type="date" name="dob" required></input>
                     <button class="register" type="submit">Sign Up for Bitter</button>
